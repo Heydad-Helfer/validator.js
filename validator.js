@@ -2009,6 +2009,13 @@ function normalizeEmail(email, options) {
   return parts.join('@');
 }
 
+// const numericNoSymbols = /^[0-9]+$/;
+
+function isSlug(str) {
+  assertString(str);
+  return str.indexOf(' ') === -1;
+}
+
 var version = '10.10.0';
 var validator = {
   version: version,
@@ -2089,7 +2096,8 @@ var validator = {
   blacklist: blacklist$1,
   isWhitelisted: isWhitelisted,
   normalizeEmail: normalizeEmail,
-  toString: toString
+  toString: toString,
+  isSlug: isSlug
 };
 
 return validator;

@@ -6208,4 +6208,25 @@ describe('Validators', () => {
       ],
     });
   });
+
+  it('should validate a slug string', () => {
+    test({
+      validator: 'isSlug',
+      valid: [
+        'hello-world',
+        'this-is-a-slug',
+        'slug',
+        'thisIsASlug',
+        '',
+        'ThisIsASlug',
+        'This_is_a_slug',
+      ],
+      invalid: [
+        'not a slug',
+        'not-a slug',
+        'not-a-slug ',
+        'ThisIs NotASlug',
+      ],
+    });
+  });
 });
