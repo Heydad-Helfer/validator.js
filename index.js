@@ -1,5 +1,5 @@
 "use strict";
-console.log('hi');
+console.log('hi2');
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
